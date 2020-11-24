@@ -5,4 +5,9 @@
  */
 function isEmpty(obj) {
   // ваш код...
+  let bool = true;
+  for (let a in obj) {
+    if(a !== undefined) bool = false;
+  }
+  return bool;
 }
