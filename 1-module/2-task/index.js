@@ -11,7 +11,7 @@ function print(text) {
  */
 function isValid(name) {
   // ваш код...
-  if(!(name.indexOf(' ') >= 0) && name.length >= 4) return true;
+   if(!(name.indexOf(' ') >= 0) && name.length >= 4) return true;
    return false;
 }
 
@@ -24,3 +24,4 @@ function sayHello() {
     print('Некорректное имя');
   }
 }
+
