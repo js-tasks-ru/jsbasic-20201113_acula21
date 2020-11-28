@@ -6,6 +6,7 @@
 
 function getMinMax(str) {
   // ваш код...
+
   let arr = [], obj = {};
   let num = str.replace(/[^0-9\-\+\s\.\,]/g, '').replace(/ {2,}/g, ',').split(',');
   for(let a of num)

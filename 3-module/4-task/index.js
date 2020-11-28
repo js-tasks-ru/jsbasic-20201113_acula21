@@ -6,6 +6,7 @@
  */
 function showSalary(users, age) {
   // ваш код...
+
   let arr = [];
   for(let a of users)
     if(age >= a.age) arr.push(a.name + ', ' + a.balance);
