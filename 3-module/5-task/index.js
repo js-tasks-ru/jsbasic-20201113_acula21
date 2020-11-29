@@ -4,12 +4,10 @@
  * @returns {{min:number, max:number}}  объект
  */
 function getMinMax(str) {
-  let arr = [], obj = {};
-  let num = str.replace(/[^0-9\-\+\s\.\,]/g, '').replace(/ {2,}/g, ',').split(',');
+  let arr = [];
+  let num = str.replace(/[a-zа-яё\+\s]/g, ',').split(',');
   for(let a of num)
     if(!isNaN(a) && '' !== a) arr.push(+a);
 
-  obj.min = Math.min(...arr);
-  obj.max = Math.max(...arr);
-  return obj;
+  return {min: Math.min(...arr), max: Math.max(...arr)};
 }
