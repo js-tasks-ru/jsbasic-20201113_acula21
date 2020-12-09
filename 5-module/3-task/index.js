@@ -7,12 +7,12 @@ function initCarousel() {
     let right = document.querySelector('.carousel__arrow_right');
     let left = document.querySelector('.carousel__arrow_left');
     left.style.display = 'none';
-    
+
 
     left.onclick = function() {
       position += width;
-      
-      if (position < 0) {  
+
+      if (position < 0) {
         left.style.display = '';
         right.style.display = '';
       }
@@ -21,6 +21,7 @@ function initCarousel() {
       list.style.transform = 'translateX(' + position + 'px)';
     };
 
+
     right.onclick = function() {
       position -= width;
       right.style.display = 'none' ;
@@ -28,7 +29,7 @@ function initCarousel() {
       if (position <= 0 && position > -2964) {
         left.style.display = '';
         right.style.display = '';
-      } 
+      }
 
       list.style.transform = 'translateX(' + position + 'px)';
     };
