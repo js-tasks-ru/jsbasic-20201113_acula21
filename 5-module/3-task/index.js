@@ -20,6 +20,7 @@ function initCarousel() {
       list.style.transform = 'translateX(' + position + 'px)';
     };
 
+
     right.onclick = function() {
       position -= width;
       right.style.display = 'none' ;
