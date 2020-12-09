@@ -8,7 +8,6 @@ function initCarousel() {
     let left = document.querySelector('.carousel__arrow_left');
     left.style.display = 'none';
 
-
     left.onclick = function() {
       position += width;
 
@@ -20,7 +19,6 @@ function initCarousel() {
 
       list.style.transform = 'translateX(' + position + 'px)';
     };
-
 
     right.onclick = function() {
       position -= width;
