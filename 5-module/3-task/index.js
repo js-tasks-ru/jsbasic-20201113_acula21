@@ -6,13 +6,16 @@ function initCarousel() {
     let width = list.offsetWidth;
     let right = document.querySelector('.carousel__arrow_right');
     let left = document.querySelector('.carousel__arrow_left');
-    if (position === 0) left.style.display = 'none';
+    left.style.display = 'none';
     
 
     left.onclick = function() {
       position += width;
-      if(position === -2964) right.style.display = '' ;
-      if(position < 0) left.style.display = '';
+      
+      if(position < 0 && position > -2964){  
+        left.style.display = '';
+        right.style.display = '';
+      }
       if(position === 0) left.style.display = 'none';
 
       list.style.transform = 'translateX(' + position + 'px)';
@@ -20,9 +23,12 @@ function initCarousel() {
 
     right.onclick = function() {
       position -= width;
-      if(position === -2964) right.style.display = 'none' ;
-      if(position < 0) left.style.display = '';
-      if(position === 0) left.style.display = 'none';
+      right.style.display = 'none' ;
+
+      if(position <= 0 && position > -2964) {
+        left.style.display = '';
+        right.style.display = '';
+      } 
 
       list.style.transform = 'translateX(' + position + 'px)';
     };
