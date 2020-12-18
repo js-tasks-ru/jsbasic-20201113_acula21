@@ -64,10 +64,10 @@ export default class Carousel {
     left.onclick = function() {
       position -= width;
       list.style.transform = 'translateX(' + position*-1 + 'px)';
-      if (position !== width*4)  right.style.display = '';
+      if (position !== width*list.childNodes.length)  right.style.display = '';
     
       if (position === 0) left.style.display = 'none';
-      
+      console.log(list.childNodes.length);
     };
     right.onclick = function() {
       position += width;
